@@ -1,0 +1,82 @@
+Notes
+
+Lecture starts at the 4:00 minute mark.
+
+Languages covered throuout the course:
+- C - Mother of all Languages
+- Python - For modern applications like data science.
+- SQL - For performing CRUD applications on relational databases.
+- Javascript - To work with HTML and CSS for modern web development.
+
+Different types of data that we will learn to represent programatically:
+- Numbers
+- Colors
+- Images
+- Videos
+- Audio
+
+Other core concepts covered:
+- Datastructures
+- Algorithms
+
+Computer Science - The study of solving problems via computations thinking
+
+- Computers at the most basic level can be broken down into transistors which either have an on or off state.
+- This is why computers operate at the machine level in binary.
+- Each 0 or 1 is known as a bit.
+- A collection of 8 bits is known as a byte, which can store 2^8 unique elements, ie 256.
+- In terms of decimal numbers, 1 byte will store 0 - 255
+- Representing English letters in binary, how was this achieved?
+- Scientists agreed to the ASCII notation system where 'A' is 65 and 'Z' is 90 and the other letters are the numbers in between.
+- 'a' is 97 and 'z' is 122.
+- 8-bits are used to store English letters in ASCII. But 256 characters are not enough to represent all letters of all languages.
+- So, scientists built upon ASCII and created the Unicode standard.
+- Unicode stores using 4 bytes or 32 bits, which can store 2^32 unique characters.
+- Unicode is represented in hexadecimal, called the unicode code point.
+
+Representing colors in computers
+- Computers store three values for each pixel of the screen.
+- These three numbers represent different intensities of red, green and blue.
+- Each pixel stores 24 bits of information as a result.
+- The intensity for each color (rgb) can range from 0 to 255, which creates all colors of the rainbow.
+
+Representing videos:
+- Its a collection of pictures (frames) flashing on the screen per second, giving the illusion of video.
+
+Representing audio files:
+- Binary would be used to represent different aspects of audio: pitch, note, duration, etc.
+- When this binary information is played through speakers, it will produce sound.
+
+So far we've looked into how to represent input values and output values when it comes to solving problems using computers.
+But how do we convert input values into output values using computers to solve a specific problem?
+This is where writing code, more specifically, algorithms comes into play.
+
+The algorithm demonstrated in this lecture: binary search.
+Time complexity of binary search is log(n).
+Computer science is about finding the optimal solution to the problem, which might not always be the naive solution.
+Finding more optimal solutions in terms of time and space complexity is the essence of computer science.
+
+Writing Pseudocode:
+
+Breaking down the problem into smaller subproblems and representing them using plain english.
+This helps us to create structure for the code we will be writing.
+
+https://cs50.ai - This website is to access the ChatGPT assistant to help with the assignments if needed.
+https://cs50.dev - This is where you will write the code for the problem sets.
+
+Abstraction
+Its a concept in CS where you utilise a feature or function, without worrying about how it works.
+Eg: APIs - You use them to achieve the desired tasks, without worrying about the code written by the API engineer.
+
+
+Week 0 - Problem set:
+
+It’s time to choose your own adventure! Your assignment, quite simply, is to implement in Scratch, at https://scratch.mit.edu, any project of your choice, be it an interactive story, game, animation, or anything else, subject only to the following requirements:
+
+Your project must use at least two sprites, at least one of which must not be a cat.
+Your project must have at least three scripts total (i.e., not necessarily three per sprite).
+Your project must use at least one conditional, at least one loop, and at least one variable.
+Your project must use at least one custom block that you have made yourself (via Make a Block), which must take at least one input.
+Your project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than Oscartime and Ivy’s Hardest Game.
+
+To meet these requirements, your project should probably use a few dozen puzzle pieces overall. And your code should ideally be not only correct but also well-designed. If one of your scripts is getting a bit long, try to break it up into multiple scripts (each of which does something specific). And try to leverage “abstraction” where possible: if you can imagine giving a descriptive name to a sequence of blocks (e.g., meow), those could probably be moved to a custom block!

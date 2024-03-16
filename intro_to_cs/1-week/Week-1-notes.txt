@@ -1,0 +1,1 @@
+The topic of this week is programming in C.
