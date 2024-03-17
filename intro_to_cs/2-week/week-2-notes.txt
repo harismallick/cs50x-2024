@@ -1,0 +1,69 @@
+Lecture video:
+https://www.youtube.com/watch?v=4vU4aEFmTSo
+
+The topics covered in this lesson:
+- Compiling code
+- Debugging code
+- Arrays
+- More CLI
+- Exit statuses
+- Cryptography intro.
+
+How to link 3rd party libraries to compiler you're using (gcc or clang):
+- By default, the compiler will not search for 3rd dependencies.
+- You have to tell the compiler which 3rd party libraries to include by using the '-l' argument, followed by the library name.
+
+- cs50.h is a 3rd party library. So if you're using gcc or clang directly, then the command would be:
+gcc <filename> -o <binaryname> -l<library>
+
+What is compiling code?
+It is an abstraction to refer to 4 key steps involved in converting source code into machine code.
+- Preprocessing
+- Compiling
+- Assembling
+- Linking
+
+1. Preprocessing
+
+This step involves checking all the libraries imported using the #include <header-file>.
+The header files contain prototypes for the actual functions we are importing and using in the code.
+This is similar to how we declare a prototype of a function before main(). As C is a procedural programming language,
+a function or variable must always be declared before it is called or assigned.
+This is what Preprocessing step does for the imported functions.
+
+2. Compiling
+
+This converts the source code written in C to assembly language.
+
+3. Assembling
+
+This step converts the assembly code into machine code (0s and 1s)
+
+4. Linking
+
+If we take this simple code:
+
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+    string name = get_string("What is your name: ");
+    printf("Hi there, %s\n", name);
+}
+
+After the Preprocessing, compiling and assembling steps, 3 separate machine code sequences will be generated:
+One for the C file we wrote.
+One for the stdio library.
+One for the cs50 library.
+
+Linking is the process of connecting these individual machine code sequences, into one sequence and one output file.
+
+Reverse Engineering:
+It is the process of converting machine code back into source code.
+This is a very difficult process and variable names, loops, and other human readable featues of source code are lost when compiling.
+Therefore, trying to decipher machine code by plugging in these holes is hard. Which is why its seldom done.
+
+
+Debugging Code:
+
