@@ -1,1 +1,77 @@
 The topic of this week is programming in C.
+
+Lecture video:
+https://www.youtube.com/watch?v=cwtpLIWylAw
+
+
+https://cs50.dev - All code will be written throughout this course in this browser-based version of VScode.
+
+Source code - This is the code that programmers write in human readable format
+Machine code - This is a binary file of 0s and 1s that the computer understands.
+
+How do we convert source code to machine code?
+- You use a compiler (for languages like C, Rust, Java)
+- And an interpreter (for languages like Python, and Javascript)
+
+The three terminal commands needed to make, compile and run C files in the VScode container:
+
+code <filename>.c - Create a C source file with the desired name
+make <filename> - This will compile the source file (with the same name?) into a binary file
+./hello - This command to execute binaries in the terminal
+
+For CS50 libraries and other documentation:
+https://manual.cs50.io
+
+A library of functions written by other programmers can be accessed using the header file.
+In C, these are the files that end with the '.h' extension.
+
+CS50 has its own library called cs50.h
+This header file contains the following functions:
+
+get_char - prompts user for a line of text from stdin and returns...
+get_double - prompts user for a line of text from stdin and returns...
+get_float - prompts user for a line of text from stdin and returns...
+get_int - prompts user for a line of text from stdin and returns...
+get_long - prompts user for a line of text from stdin and returns...
+get_long_long - prompts user for a line of text from stdin and returns...
+get_string - prompts user for a line of text from stdin and returns...
+
+'string' is a datatype in the cs50 library.
+They have probably typedef-ed char name[] to string, but for the first few lectures, might need to declare strings in this way.
+Rather than char name[n];
+
+Another unnecessary change -> rather than using %d to format integers into formatted prints, you use %i.
+However, %d works just fine!
+
+// The C convention of the keep the main() function as close to the top of the file as possible.
+// Therefore, you declare the function before main(), and define it afterwards.
+// This declaration is known as the prototype.
+// This is acceptable by the gcc compiler.
+
+Typecasting - Official term for converting one data type to another in a programming language.
+int x = 5;
+int y = 2;
+float z = (float) x / y;
+If we don't typecast either x or y to a float, then 5/2 will return 2, not 2.5.
+This is known as truncation.
+When a math operation results in a floating point number, if the number is assigned to an integer datatype, then everything after the 
+decimal point will be truncated.
+
+Floating point imprecision is the other issue that can arise when trying to store floating point numbers.
+Floats are only accurate till a certain number of decimal points, regardless of if you use float or double data type.
+This is because only a finite amount of memory can be used to store each floating number.
+
+In computers, the flow of time is tracked in seconds from January 1st, 1970.
+
+Documentation for submit50 and check50 commands in the vscode container for CS50:
+https://cs50.readthedocs.io/submit50/
+
+Luhn's algorithm - Topic for one of the problem set questions
+This algorithm is a checksum for a valid credit or debit card number
+The algorithm works like this:
+- Multiple every other digit, starting from the 10s position, by 2.
+- Add all the DIGITS of the results of the individual multiplications.
+- So, if the multiplication resulted in 12, you would add 1 + 2.
+- Add all the remaining numbers that weren't multiplied by 2.
+- Add the two results and that resulting number should be a multiple of 10 to be a valid credit or debit card.
+
