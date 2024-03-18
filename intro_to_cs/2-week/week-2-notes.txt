@@ -67,3 +67,24 @@ Therefore, trying to decipher machine code by plugging in these holes is hard. W
 
 Debugging Code:
 
+Other than using printf statements, one can write helper functions or use a dedicated debugger.
+There is a debugger installed in the linux container for cs50, which can be accessed using the command debug50
+Run the following in the command line:
+debug50 ./<binaryname>
+
+Status codes:
+
+// Status codes help decipher how the code execution complete.
+// Return value of 0 is universally recognised as code execution completed successfully.
+// Returning another integer value will signify ending with an error.
+// Each return error code can be assigned as key-value pairs to a list of errors.
+// echo $?
+// This command lets you see the status code of the last executed binary in your linux terminal.
+
+Cryptography
+
+Encryption - scrambling human readable text into ciphertext.
+Cipher - An algorithm that scrambles or encrypts your text in a REVERSIBLE way.
+So, a cipher can be encrypted and decrypted.
+
+Hashes are IRREVERSIBLE
